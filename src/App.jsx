@@ -1,9 +1,9 @@
 import "./App.css";
 import { useState, useEffect } from "react";
-import Button from "./components/button";
 import Table from "./components/Table";
 import logo from './assets/images/oruPhones logo.png'
-import Table2 from "./components/table2";
+import Button from './components/Button'
+import Table2 from "./components/Table2";
 
 function App() {
   const [data1, setData1] = useState([]);
@@ -15,7 +15,7 @@ function App() {
   const [data, setData] = useState([]);
 
   const handleTask1 = async () => {
-    // const res = await fetch("https://backend-api-t58t.onrender.com/users/task3");
+    // const res = await fetch("/users/task3");
     // const data = await res.json();
     // setData1(data.result);
     console.log(data1);
@@ -27,23 +27,23 @@ function App() {
 
   useEffect(() => {
     const Fetch = async () => {
-      const res1 = await fetch("https://backend-api-t58t.onrender.com/users/task1");
+      const res1 = await fetch("/users/task1");
       const data1 = await res1.json();
       setData1(data1.result);
 
-      const res2 = await fetch("https://backend-api-t58t.onrender.com/users/task2");
+      const res2 = await fetch("/users/task2");
       const data2 = await res2.json();
       setData2(data2.result);
 
-      const res3 = await fetch("https://backend-api-t58t.onrender.com/users/task3");
+      const res3 = await fetch("/users/task3");
       const data3 = await res3.json();
       setData3(data3.result);
 
-      const res4 = await fetch("https://backend-api-t58t.onrender.com/users/task4");
+      const res4 = await fetch("/users/task4");
       const data4 = await res4.json();
       setData4(data4.result);
 
-      const res5 = await fetch("https://backend-api-t58t.onrender.com/users/task5");
+      const res5 = await fetch("/users/task5");
       const data5 = await res5.json();
       setData5(data5.result);
     };
